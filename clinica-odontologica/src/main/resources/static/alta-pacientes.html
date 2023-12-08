@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>alta pacientes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/post_paciente.js"></script>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #c1d4d6;
+    }
+
+    .container {
+        margin-top: 20px;
+    }
+
+    .nav-pills {
+        margin-bottom: 20px;
+    }
+
+    .nav-link {
+        background-color: #4CAF50;
+        color: #fff;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+    .nav-link:hover {
+        background-color: #45a049;
+        color: #fff;
+    }
+
+    .col-sm-7 {
+        background-color: #e6fffa;
+        padding: 10px;
+        border-radius: 3px;
+    }
+
+    h3 {
+        color: #14484f;
+    }
+
+    #add_new_paciente .form-group label {
+        color: #14484f;
+    }
+
+    #response {
+        display: none;
+        margin-top: 10px;
+    }
+</style>
+<body>
+<div class="container">
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link" href="/pacientes.html">Administracion pacientes</a>
+        </li>
+    </ul>
+    <div class="row">
+        <div class="col-sm-7" style="background-color:#e6fffa; padding:10px; border-radius:3px">
+            <h3>Agregar paciente</h3>
+            <form id="add_new_paciente">
+                <div class="form-group">
+                    <label class="control-label" for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre"
+                           placeholder="Ingrese el nombre" name="nombre" required></input>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="apellido">Apellido:</label>
+                    <input type="text" class="form-control" id="apellido"
+                           placeholder="Ingrese la apellido" name="apellido" required></input>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="dni">Matricula:</label>
+                    <input type="number" class="form-control" id="dni"
+                           placeholder="Ingrese dni" name="dni"></input>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="fechaAlta">fecha Alta:</label>
+                    <input type="date" class="form-control" id="fechaAlta"
+                           placeholder="Ingrese fechaAlta" name="fechaAlta"></input>
+                </div>
+
+                <button type="submit" class="btn btn-danger" id="btn-add-new-paciente">Cargar</button>
+            </form>
+            <div id="response" style="display:none; margin-top:10px">
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
